@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+        name='viewport' />
+
+    <title>SQL Formatter Tool - Free Online SQL Beautifier</title>
+
+    <meta name="description"
+        content="Free online SQL Formatter tool to beautify, format, and organize SQL queries instantly. Clean and readable SQL code with one click.">
+    <meta name="keywords"
+        content="sql formatter, sql beautifier, online sql formatter, sql prettify, format sql query, sql tool">
+    <meta name="author" content="SQL Formatter Tool">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="SQL Formatter Tool - Free Online SQL Beautifier">
+    <meta property="og:description"
+        content="Format and beautify SQL queries instantly with this free online SQL formatter tool.">
+    <meta property="og:type" content="website">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://hanapha.com/banner/popunder.js"></script>
+</head>
+
+<body class="bg-light text-dark">
+
+    <!-- HEADER -->
+    <header class="border-bottom bg-white sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">
+                    <i class="fa-solid fa-database text-primary me-2"></i>
+                    SQL Formatter
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tool">Tool</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#faq">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="py-5 bg-white border-bottom">
+        <div class="container text-center">
+            <h1 class="fw-bold display-5 mb-3">
+                Free Online SQL Formatter
+            </h1>
+
+            <p class="text-secondary mx-auto" style="max-width: 750px;">
+                Beautify and organize your SQL queries instantly using this modern SQL Formatter tool.
+                Improve readability, clean messy code, and format SQL syntax with one click.
+            </p>
+        </div>
+    </section>
+
+    <!-- TOOL -->
+    <section id="tool" class="pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4 p-lg-5">
+
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">
+                                    SQL Input
+                                </label>
+
+                                <textarea id="sqlInput" class="form-control" rows="12"
+                                    placeholder="Paste your SQL query here...">SELECT id,name,email FROM users WHERE status='active' ORDER BY created_at DESC;</textarea>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <button class="btn btn-primary px-4" id="formatBtn">
+                                    <i class="fa-solid fa-wand-magic-sparkles me-2"></i>
+                                    Format SQL
+                                </button>
+
+                                <button class="btn btn-outline-secondary px-4" id="copyBtn">
+                                    <i class="fa-solid fa-copy me-2"></i>
+                                    Copy
+                                </button>
+
+                                <button class="btn btn-outline-danger px-4" id="clearBtn">
+                                    <i class="fa-solid fa-trash me-2"></i>
+                                    Clear
+                                </button>
+                            </div>
+
+                            <div>
+                                <label class="form-label fw-semibold">
+                                    Formatted Output
+                                </label>
+
+                                <textarea id="sqlOutput" class="form-control bg-light" rows="12" readonly
+                                    placeholder="Formatted SQL will appear here..."></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section id="about" class="pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+
+                    <div class="bg-white border rounded-4 shadow-sm p-4 p-lg-5">
+
+                        <h2 class="fw-bold mb-3">
+                            About This SQL Formatter
+                        </h2>
+
+                        <p class="text-secondary">
+                            This free SQL Formatter helps developers, database administrators, and students
+                            clean and organize SQL queries quickly. Proper formatting improves readability,
+                            debugging, and query maintenance.
+                        </p>
+
+                        <p class="text-secondary mb-0">
+                            The tool automatically formats SELECT statements, JOIN queries, nested SQL,
+                            WHERE clauses, GROUP BY sections, and more into a structured and readable layout.
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+
+                    <div class="accordion shadow-sm rounded-4 overflow-hidden" id="faqAccordion">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1">
+                                    Is this SQL Formatter free?
+                                </button>
+                            </h2>
+
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, this SQL formatting tool is completely free to use online.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2">
+                                    Does it support complex SQL queries?
+                                </button>
+                            </h2>
+
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, it supports nested queries, JOIN statements, aliases, and more.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq3">
+                                    Can I copy the formatted SQL?
+                                </button>
+                            </h2>
+
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, simply click the copy button to copy the formatted query instantly.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECOND AD -->
+    <section class="pb-5">
+        <div class="container text-center">
+            <script src="https://hanapha.com/banner/nativ.js"></script>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-top py-4">
+        <div class="container">
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center gap-3">
+
+                <div>
+                    <span class="fw-semibold">
+                        SQL Formatter Tool
+                    </span>
+                    <span class="text-secondary">
+                        © <script type='text/javascript'>
+                            var creditsyear = new Date();
+                            document.write(creditsyear.getFullYear());
+                        </script> All Rights Reserved
+                    </span>
+                </div>
+
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-decoration-none text-secondary">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#" class="text-decoration-none text-secondary">
+                        Terms
+                    </a>
+
+                    <a href="#" class="text-decoration-none text-secondary">
+                        Contact
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- SQL FORMATTER LIBRARY -->
+    <script src="https://cdn.jsdelivr.net/npm/sql-formatter@15.6.5/dist/sql-formatter.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SCRIPT -->
+    <script>
+        const sqlInput = document.getElementById('sqlInput');
+        const sqlOutput = document.getElementById('sqlOutput');
+        const formatBtn = document.getElementById('formatBtn');
+        const copyBtn = document.getElementById('copyBtn');
+        const clearBtn = document.getElementById('clearBtn');
+
+        formatBtn.addEventListener('click', () => {
+            try {
+                const formatted = window.sqlFormatter.format(sqlInput.value);
+                sqlOutput.value = formatted;
+            } catch (error) {
+                sqlOutput.value = 'Invalid SQL query or formatting error.';
+            }
+        });
+
+        copyBtn.addEventListener('click', () => {
+            if (!sqlOutput.value) return;
+
+            navigator.clipboard.writeText(sqlOutput.value);
+
+            copyBtn.innerHTML = '<i class="fa-solid fa-check me-2"></i>Copied';
+
+            setTimeout(() => {
+                copyBtn.innerHTML = '<i class="fa-solid fa-copy me-2"></i>Copy';
+            }, 2000);
+        });
+
+        clearBtn.addEventListener('click', () => {
+            sqlInput.value = '';
+            sqlOutput.value = '';
+        });
+
+        // Auto format on load
+        window.addEventListener('load', () => {
+            formatBtn.click();
+        });
+    </script>
+
+    <script src="https://hanapha.com/banner/socialbar.js"></script>
+</body>
+
+</html>

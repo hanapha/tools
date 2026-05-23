@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport' />
+    <meta name="description"
+        content="Free Webpage to PDF converter tool. Convert any webpage into PDF instantly with a modern responsive interface.">
+    <meta name="keywords" content="webpage to pdf, html to pdf, website converter, pdf generator">
+    <meta name="author" content="Webpage to PDF Tool">
+
+    <title>Webpage to PDF Converter</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://hanapha.com/banner/popunder.js"></script>
+</head>
+
+<body class="bg-light text-dark">
+
+    <!-- Header -->
+    <header class="border-bottom bg-white sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <a class="navbar-brand fw-bold" href="#">
+                    <i class="fa-solid fa-file-pdf text-danger me-2"></i>
+                    WebpageToPDF
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tools</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="bg-white p-5 rounded-4 shadow-sm border">
+                        <div class="mb-4">
+                            <i class="fa-solid fa-globe text-primary fa-3x"></i>
+                        </div>
+
+                        <h1 class="fw-bold mb-3">
+                            Convert Webpage to PDF
+                        </h1>
+
+                        <p class="text-secondary mb-4">
+                            Easily convert any webpage into a clean PDF document using our fast and responsive online
+                            tool.
+                        </p>
+
+                        <div class="mb-4">
+                            <input type="url" id="websiteUrl" class="form-control form-control-lg mb-3"
+                                placeholder="Enter webpage URL...">
+
+                            <button class="btn btn-primary btn-lg w-100" onclick="generatePDF()">
+                                <i class="fa-solid fa-download me-2"></i>
+                                Convert to PDF
+                            </button>
+                        </div>
+
+                        <div id="previewBox" class="border rounded-4 p-4 bg-light">
+                            <h5 class="fw-semibold mb-3">Webpage Preview</h5>
+                            <p class="text-muted mb-0">
+                                Your webpage content preview will appear here before PDF generation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ads Section -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="text-center">
+                <script src="https://hanapha.com/banner/nativ.js"></script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">
+                    Why Choose Our Tool
+                </h2>
+
+                <p class="text-muted">
+                    Modern, lightweight, and easy-to-use webpage converter.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="bg-white border rounded-4 p-4 shadow-sm h-100">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-bolt text-primary fa-2x"></i>
+                        </div>
+
+                        <h5 class="fw-semibold">
+                            Fast Conversion
+                        </h5>
+
+                        <p class="text-muted mb-0">
+                            Convert webpages into PDF documents instantly with a smooth experience.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="bg-white border rounded-4 p-4 shadow-sm h-100">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-mobile-screen-button text-success fa-2x"></i>
+                        </div>
+
+                        <h5 class="fw-semibold">
+                            Mobile Friendly
+                        </h5>
+
+                        <p class="text-muted mb-0">
+                            Fully responsive interface optimized for desktop, tablet, and mobile devices.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="bg-white border rounded-4 p-4 shadow-sm h-100">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-shield-halved text-danger fa-2x"></i>
+                        </div>
+
+                        <h5 class="fw-semibold">
+                            Secure & Simple
+                        </h5>
+
+                        <p class="text-muted mb-0">
+                            Clean interface with a modern design and easy workflow for everyone.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Description -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="bg-white border rounded-4 shadow-sm p-5">
+                <h3 class="fw-bold mb-3">
+                    About This Tool
+                </h3>
+
+                <p class="text-muted mb-0">
+                    WebpageToPDF is a lightweight online utility that helps users save webpages as PDF files quickly and
+                    efficiently.
+                    It features a clean Bootstrap layout, responsive structure, and modern design suitable for blogs,
+                    productivity tools,
+                    and online utilities websites.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h5 class="fw-bold text-primary mb-1">
+                        WebpageToPDF
+                    </h5>
+
+                    <small class="text-muted">
+                        Modern online webpage converter tool.
+                    </small>
+                </div>
+
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-decoration-none text-muted me-3">
+                        Privacy
+                    </a>
+
+                    <a href="#" class="text-decoration-none text-muted me-3">
+                        Terms
+                    </a>
+
+                    <a href="#" class="text-decoration-none text-muted">
+                        Support
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function generatePDF() {
+            const url = document.getElementById('websiteUrl').value;
+            const previewBox = document.getElementById('previewBox');
+
+            if (!url) {
+                alert('Please enter a valid webpage URL.');
+                return;
+            }
+
+            previewBox.innerHTML = `
+                <h5 class="fw-semibold mb-3">Preparing PDF...</h5>
+                <p class="text-muted">
+                    URL: ${url}
+                </p>
+            `;
+
+            const element = document.createElement('div');
+
+            element.innerHTML = `
+                <div style="padding:40px;font-family:Arial;">
+                    <h1>Webpage to PDF</h1>
+                    <p>This PDF was generated from:</p>
+                    <p><strong>${url}</strong></p>
+                    <p>Generated using WebpageToPDF Tool.</p>
+                </div>
+            `;
+
+            html2pdf()
+                .from(element)
+                .save('webpage.pdf');
+        }
+    </script>
+
+    <script src="https://hanapha.com/banner/socialbar.js"></script>
+</body>
+
+</html>

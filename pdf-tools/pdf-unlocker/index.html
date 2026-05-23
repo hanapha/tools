@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport' />
+    <meta name="description"
+        content="Free PDF Unlocker Tool to remove password protection from PDF files online easily and securely.">
+    <meta name="keywords" content="PDF Unlocker, Unlock PDF, Remove PDF Password, Free PDF Tool">
+    <meta name="author" content="PDF Unlocker">
+    <title>PDF Unlocker - Free Online Tool</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://hanapha.com/banner/popunder.js"></script>
+</head>
+
+<body class="bg-light text-dark">
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-none border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fa-solid fa-lock-open text-warning me-2"></i>PDF Unlocker
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4 p-lg-5">
+
+                            <div class="text-center mb-4">
+                                <div class="bg-primary bg-opacity-10 d-inline-flex p-3 rounded-circle mb-3">
+                                    <i class="fa-solid fa-file-pdf fa-2x text-danger"></i>
+                                </div>
+
+                                <h1 class="fw-bold mb-3">Free PDF Unlocker</h1>
+
+                                <p class="text-secondary">
+                                    Remove password protection from your PDF files quickly and securely.
+                                    Upload your PDF, enter the password, and unlock it instantly online.
+                                </p>
+                            </div>
+
+                            <!-- Upload Form -->
+                            <form id="unlockForm">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">
+                                        Upload PDF File
+                                    </label>
+
+                                    <input type="file" class="form-control form-control-lg" id="pdfFile" accept=".pdf"
+                                        required>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label fw-semibold">
+                                        PDF Password
+                                    </label>
+
+                                    <div class="input-group input-group-lg">
+                                        <span class="input-group-text">
+                                            <i class="fa-solid fa-key"></i>
+                                        </span>
+
+                                        <input type="password" class="form-control" id="pdfPassword"
+                                            placeholder="Enter PDF password" required>
+                                    </div>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg rounded-3">
+                                        <i class="fa-solid fa-unlock me-2"></i>
+                                        Unlock PDF
+                                    </button>
+                                </div>
+                            </form>
+
+                            <!-- Result -->
+                            <div id="resultMessage" class="mt-4 d-none">
+                                <div class="alert alert-success rounded-3">
+                                    <i class="fa-solid fa-circle-check me-2"></i>
+                                    Your PDF has been unlocked successfully.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Ads -->
+                    <div class="text-center mt-4">
+                        <script src="https://hanapha.com/banner/nativ.js"></script>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="card border-0 shadow-sm rounded-4 mt-4">
+                        <div class="card-body p-4">
+                            <h2 class="fw-bold mb-3">
+                                Why Use Our PDF Unlocker?
+                            </h2>
+
+                            <div class="row g-4">
+
+                                <div class="col-md-4">
+                                    <div class="border rounded-4 p-4 h-100 bg-white">
+                                        <i class="fa-solid fa-bolt text-warning fa-2x mb-3"></i>
+                                        <h5 class="fw-semibold">Fast Processing</h5>
+                                        <p class="text-secondary mb-0">
+                                            Unlock protected PDF documents in seconds using a modern online tool.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="border rounded-4 p-4 h-100 bg-white">
+                                        <i class="fa-solid fa-shield-halved text-success fa-2x mb-3"></i>
+                                        <h5 class="fw-semibold">Secure</h5>
+                                        <p class="text-secondary mb-0">
+                                            Your uploaded files are processed securely and are not stored permanently.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="border rounded-4 p-4 h-100 bg-white">
+                                        <i class="fa-solid fa-mobile-screen text-primary fa-2x mb-3"></i>
+                                        <h5 class="fw-semibold">Responsive</h5>
+                                        <p class="text-secondary mb-0">
+                                            Works perfectly on desktop, tablet, and mobile devices.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-2 fw-semibold">
+                PDF Unlocker Tool
+            </p>
+
+            <p class="text-secondary mb-0">
+                © <script type='text/javascript'>
+                    var creditsyear = new Date();
+                    document.write(creditsyear.getFullYear());
+                </script> All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const unlockForm = document.getElementById('unlockForm');
+        const resultMessage = document.getElementById('resultMessage');
+
+        unlockForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const fileInput = document.getElementById('pdfFile');
+            const passwordInput = document.getElementById('pdfPassword');
+
+            if (fileInput.files.length === 0) {
+                alert('Please upload a PDF file.');
+                return;
+            }
+
+            if (passwordInput.value.trim() === '') {
+                alert('Please enter the PDF password.');
+                return;
+            }
+
+            resultMessage.classList.remove('d-none');
+
+            unlockForm.reset();
+        });
+    </script>
+
+    <script src="https://hanapha.com/banner/socialbar.js"></script>
+</body>
+
+</html>

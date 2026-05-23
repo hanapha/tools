@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport' />
+  <meta name="description"
+    content="PDF Page Numbering Tool - Add page numbers to your PDF easily and quickly online." />
+  <meta name="keywords" content="PDF page numbering, add page numbers, PDF tool, online PDF editor" />
+  <meta name="author" content="PDF Tools" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <title>PDF Page Numbering Tool</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- PDF-lib -->
+  <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+    <script src="https://hanapha.com/banner/popunder.js"></script>
+</head>
+
+<body class="bg-light text-dark">
+  <header class="bg-white border-bottom shadow-none sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light container">
+      <a class="navbar-brand fw-bold text-dark" href="#">
+        <i class="fa-solid fa-file-pdf text-danger me-2"></i>
+        PDF Page Numbering
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item">
+            <a class="btn btn-primary px-4" href="#tool">Start OCR</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- DESCRIPTION -->
+  <section class="py-4">
+    <div class="container">
+      <div class="bg-white border rounded p-4">
+        <h2 class="h5 fw-bold">Description</h2>
+        <p class="mb-0">
+          This tool allows you to automatically add page numbers to your PDF file.
+          Upload your PDF, choose position, and download the updated file instantly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AD SLOT -->
+  <section class="pb-3">
+    <div class="container">
+      <div class="text-center">
+        <script src="https://hanapha.com/banner/nativ.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN TOOL -->
+  <section class="pb-5">
+    <div class="container">
+      <div class="bg-white border rounded p-4">
+
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Upload PDF</label>
+          <input type="file" id="pdfFile" class="form-control" accept="application/pdf">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Page Number Position</label>
+          <select id="position" class="form-select">
+            <option value="bottom-center">Bottom Center</option>
+            <option value="bottom-right">Bottom Right</option>
+            <option value="bottom-left">Bottom Left</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary w-100" onclick="addPageNumbers()">
+          <i class="fa-solid fa-magic-wand-sparkles me-2"></i>
+          Add Page Numbers
+        </button>
+
+        <div id="status" class="mt-3 text-center text-muted"></div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-top py-3">
+    <div class="container text-center">
+      <small class="text-muted">
+        © <script type='text/javascript'>
+          var creditsyear = new Date();
+          document.write(creditsyear.getFullYear());
+        </script> PDF Page Numbering Tool - Built with Bootstrap
+      </small>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    async function addPageNumbers() {
+      const fileInput = document.getElementById("pdfFile");
+      const status = document.getElementById("status");
+
+      if (!fileInput.files.length) {
+        status.innerHTML = "Please upload a PDF file first.";
+        return;
+      }
+
+      const file = fileInput.files[0];
+      const position = document.getElementById("position").value;
+
+      status.innerHTML = "Processing PDF...";
+
+      const arrayBuffer = await file.arrayBuffer();
+      const pdfDoc = await PDFLib.PDFDocument.load(arrayBuffer);
+
+      const pages = pdfDoc.getPages();
+      const font = await pdfDoc.embedFont(PDFLib.StandardFonts.Helvetica);
+
+      pages.forEach((page, index) => {
+        const {
+          width,
+          height
+        } = page.getSize();
+        const text = `${index + 1}`;
+
+        let x = width / 2;
+        let y = 20;
+
+        if (position === "bottom-right") {
+          x = width - 30;
+        } else if (position === "bottom-left") {
+          x = 30;
+        }
+
+        page.drawText(text, {
+          x: x,
+          y: y,
+          size: 12,
+          font: font
+        });
+      });
+
+      const pdfBytes = await pdfDoc.save();
+
+      const blob = new Blob([pdfBytes], {
+        type: "application/pdf"
+      });
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "numbered.pdf";
+      a.click();
+
+      status.innerHTML = "Done! Download started.";
+    }
+  </script>
+
+    <script src="https://hanapha.com/banner/socialbar.js"></script>
+</body>
+
+</html>

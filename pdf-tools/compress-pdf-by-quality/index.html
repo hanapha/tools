@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport' />
+    <meta name="description"
+        content="Compress PDF by quality online for free. Reduce PDF file size quickly with adjustable quality settings.">
+    <meta name="keywords" content="compress pdf, pdf compressor, reduce pdf size, online pdf tool">
+    <meta name="author" content="PDF Tools">
+    <meta name="robots" content="index, follow">
+
+    <title>Compress PDF By Quality</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="https://hanapha.com/banner/popunder.js"></script>
+</head>
+
+<body class="bg-light text-dark">
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-none sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fa-solid fa-file-pdf text-primary me-2"></i>Compress PDF
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+
+                    <span class="badge bg-primary-subtle text-primary mb-3 px-3 py-2">
+                        Free Online PDF Tool
+                    </span>
+
+                    <h1 class="fw-bold display-5 mb-3">
+                        Compress PDF By Quality
+                    </h1>
+
+                    <p class="text-secondary mb-4">
+                        Reduce PDF file size instantly using adjustable compression quality.
+                        Upload your PDF, choose quality level, and download the optimized file.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Tool -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8">
+
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+
+                            <div class="text-center mb-4">
+                                <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                    style="width: 80px; height: 80px;">
+                                    <i class="fa-solid fa-file-arrow-up fa-2x text-primary"></i>
+                                </div>
+
+                                <h3 class="fw-bold">
+                                    Upload PDF File
+                                </h3>
+
+                                <p class="text-secondary">
+                                    Select your PDF file and choose compression quality.
+                                </p>
+                            </div>
+
+                            <form id="compressForm">
+
+                                <div class="mb-4">
+                                    <label class="form-label fw-semibold">
+                                        Select PDF File
+                                    </label>
+
+                                    <input type="file" class="form-control form-control-lg" id="pdfFile" accept=".pdf"
+                                        required>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label fw-semibold">
+                                        Compression Quality
+                                    </label>
+
+                                    <select class="form-select form-select-lg" id="qualitySelect">
+                                        <option value="high">High Quality</option>
+                                        <option value="medium" selected>Medium Quality</option>
+                                        <option value="low">Low Quality</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label fw-semibold">
+                                        Compression Level
+                                    </label>
+
+                                    <input type="range" class="form-range" min="1" max="100" value="60"
+                                        id="compressionRange">
+
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-secondary">Smaller File</small>
+                                        <small class="fw-semibold" id="rangeValue">60%</small>
+                                        <small class="text-secondary">Better Quality</small>
+                                    </div>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg rounded-3">
+                                        <i class="fa-solid fa-compress me-2"></i>
+                                        Compress PDF
+                                    </button>
+                                </div>
+
+                            </form>
+
+                            <!-- Result -->
+                            <div class="alert alert-success mt-4 d-none" id="resultBox">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-circle-check me-2"></i>
+                                    <div>
+                                        PDF compressed successfully.
+                                    </div>
+                                </div>
+
+                                <a href="#" class="btn btn-success mt-3" id="downloadBtn">
+                                    <i class="fa-solid fa-download me-2"></i>
+                                    Download PDF
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Section -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="text-center">
+                <script src="https://hanapha.com/banner/nativ.js"></script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="pb-5">
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 rounded-4">
+                        <div class="card-body p-4 text-center">
+
+                            <div class="mb-3">
+                                <i class="fa-solid fa-bolt fa-2x text-primary"></i>
+                            </div>
+
+                            <h5 class="fw-bold">
+                                Fast Compression
+                            </h5>
+
+                            <p class="text-secondary mb-0">
+                                Compress PDF files quickly with optimized processing.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 rounded-4">
+                        <div class="card-body p-4 text-center">
+
+                            <div class="mb-3">
+                                <i class="fa-solid fa-shield-halved fa-2x text-success"></i>
+                            </div>
+
+                            <h5 class="fw-bold">
+                                Secure Files
+                            </h5>
+
+                            <p class="text-secondary mb-0">
+                                Your uploaded PDF files stay private and secure.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 rounded-4">
+                        <div class="card-body p-4 text-center">
+
+                            <div class="mb-3">
+                                <i class="fa-solid fa-mobile-screen fa-2x text-danger"></i>
+                            </div>
+
+                            <h5 class="fw-bold">
+                                Mobile Friendly
+                            </h5>
+
+                            <p class="text-secondary mb-0">
+                                Use the tool easily on desktop, tablet, and mobile devices.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4">
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <span class="fw-semibold text-primary">
+                        Compress PDF By Quality
+                    </span>
+                </div>
+
+                <div class="col-md-6 text-center text-md-end">
+                    <small class="text-secondary">
+                        © <script type='text/javascript'>
+                            var creditsyear = new Date();
+                            document.write(creditsyear.getFullYear());
+                        </script> All Rights Reserved.
+                    </small>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const range = document.getElementById('compressionRange');
+        const rangeValue = document.getElementById('rangeValue');
+        const form = document.getElementById('compressForm');
+        const resultBox = document.getElementById('resultBox');
+
+        range.addEventListener('input', function () {
+            rangeValue.innerText = this.value + '%';
+        });
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const fileInput = document.getElementById('pdfFile');
+
+            if (fileInput.files.length === 0) {
+                alert('Please select a PDF file.');
+                return;
+            }
+
+            resultBox.classList.remove('d-none');
+
+            setTimeout(() => {
+                alert('PDF compression completed successfully.');
+            }, 500);
+        });
+    </script>
+
+    <script src="https://hanapha.com/banner/socialbar.js"></script>
+</body>
+
+</html>

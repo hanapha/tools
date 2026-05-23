@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport' />
+    <meta name="description"
+        content="Free JPG to PDF converter online. Convert JPG images into PDF files quickly and easily.">
+    <meta name="keywords" content="JPG to PDF, image converter, PDF generator, online tool">
+    <meta name="author" content="JPG to PDF Tool">
+
+    <title>JPG to PDF Converter</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://hanapha.com/banner/popunder.js"></script>
+</head>
+
+<body class="bg-light text-dark">
+    <!-- Header -->
+    <header class="border-bottom bg-white sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fa-solid fa-file-pdf text-danger"></i> JPG to PDF
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="fw-bold mb-3">Convert JPG to PDF Online</h1>
+                    <p class="text-secondary mb-4">
+                        Easily convert your JPG images into high-quality PDF files.
+                        Fast, free, responsive, and simple to use on any device.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Converter -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+
+                            <div class="text-center mb-4">
+                                <i class="fa-solid fa-images fa-3x text-primary mb-3"></i>
+                                <h4 class="fw-semibold">Upload JPG Images</h4>
+                            </div>
+
+                            <input type="file" id="imageInput" class="form-control form-control-lg mb-4"
+                                accept="image/jpeg,image/jpg" multiple>
+
+                            <div class="d-grid">
+                                <button class="btn btn-primary btn-lg rounded-3" id="convertBtn">
+                                    <i class="fa-solid fa-file-arrow-down"></i>
+                                    Convert to PDF
+                                </button>
+                            </div>
+
+                            <div id="previewContainer" class="row mt-4 g-3"></div>
+
+                        </div>
+                    </div>
+
+                    <!-- Ad Space -->
+                    <div class="text-center mt-4">
+                        <script src="https://hanapha.com/banner/nativ.js"></script>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Description -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <h3 class="fw-bold mb-3">About This Tool</h3>
+
+                            <p class="text-secondary">
+                                This JPG to PDF converter helps you merge and convert multiple JPG images into a single
+                                PDF file directly in your browser.
+                            </p>
+
+                            <div class="row mt-4">
+                                <div class="col-md-4 mb-3">
+                                    <div class="border rounded-4 p-3 h-100 bg-light">
+                                        <i class="fa-solid fa-bolt text-primary fa-2x mb-3"></i>
+                                        <h5>Fast</h5>
+                                        <p class="text-secondary small mb-0">
+                                            Quick image processing with instant PDF generation.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="border rounded-4 p-3 h-100 bg-light">
+                                        <i class="fa-solid fa-shield-halved text-success fa-2x mb-3"></i>
+                                        <h5>Secure</h5>
+                                        <p class="text-secondary small mb-0">
+                                            Your files stay private and are processed locally.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="border rounded-4 p-3 h-100 bg-light">
+                                        <i class="fa-solid fa-mobile-screen-button text-danger fa-2x mb-3"></i>
+                                        <h5>Responsive</h5>
+                                        <p class="text-secondary small mb-0">
+                                            Works perfectly on desktop, tablet, and mobile devices.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4">
+        <div class="container">
+            <div class="text-center">
+                <p class="mb-1 fw-semibold">
+                    <i class="fa-solid fa-file-pdf text-danger"></i>
+                    JPG to PDF Converter
+                </p>
+
+                <p class="text-secondary small mb-0">
+                    © <script type='text/javascript'>
+                        var creditsyear = new Date();
+                        document.write(creditsyear.getFullYear());
+                    </script> All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const previewContainer = document.getElementById('previewContainer');
+        const convertBtn = document.getElementById('convertBtn');
+
+        imageInput.addEventListener('change', function () {
+            previewContainer.innerHTML = '';
+
+            const files = Array.from(this.files);
+
+            files.forEach(file => {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    const col = document.createElement('div');
+                    col.className = 'col-md-4';
+
+                    col.innerHTML = `
+                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                            <img src="${e.target.result}" class="img-fluid" alt="Preview">
+                        </div>
+                    `;
+
+                    previewContainer.appendChild(col);
+                };
+
+                reader.readAsDataURL(file);
+            });
+        });
+
+        convertBtn.addEventListener('click', async function () {
+            const files = imageInput.files;
+
+            if (!files.length) {
+                alert('Please upload JPG images first.');
+                return;
+            }
+
+            const {
+                jsPDF
+            } = window.jspdf;
+            const pdf = new jsPDF();
+
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+
+                const imgData = await new Promise((resolve) => {
+                    const reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        resolve(e.target.result);
+                    };
+
+                    reader.readAsDataURL(file);
+                });
+
+                const img = new Image();
+
+                await new Promise((resolve) => {
+                    img.onload = resolve;
+                    img.src = imgData;
+                });
+
+                const pdfWidth = pdf.internal.pageSize.getWidth();
+                const pdfHeight = (img.height * pdfWidth) / img.width;
+
+                if (i > 0) {
+                    pdf.addPage();
+                }
+
+                pdf.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfHeight);
+            }
+
+            pdf.save('converted.pdf');
+        });
+    </script>
+
+    <script src="https://hanapha.com/banner/socialbar.js"></script>
+</body>
+
+</html>

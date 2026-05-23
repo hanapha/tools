@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+        name='viewport' />
+    <meta name="description"
+        content="Free online URL Encoder and Decoder tool. Easily encode or decode URLs instantly with a modern responsive Bootstrap interface.">
+    <meta name="keywords" content="URL Encoder, URL Decoder, Encode URL, Decode URL, Online URL Tool">
+    <meta name="author" content="Hanapha Tools">
+    <meta name="robots" content="index, follow">
+
+    <title>URL Encoder & Decoder - Free Online Tool</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://hanapha.com/banner/popunder.js"></script>
+</head>
+
+<body class="bg-light text-dark">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fa-solid fa-link text-primary me-2"></i>
+                URL Encoder & Decoder
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tools</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="py-5 bg-white border-bottom">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-3">
+                Free Online URL Encoder & Decoder
+            </h2>
+
+            <p class="text-secondary mx-auto" style="max-width: 760px;">
+                Easily encode or decode URLs instantly using this fast and modern online tool.
+                Perfect for developers, marketers, students, and anyone working with web links or query strings.
+            </p>
+        </div>
+    </section>
+
+    <!-- MAIN TOOL -->
+    <main class="py-5">
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">
+                                    Enter Text or URL
+                                </label>
+
+                                <textarea id="inputText" class="form-control" rows="8"
+                                    placeholder="Paste your URL or encoded text here..."></textarea>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <button class="btn btn-primary px-4" onclick="encodeURL()">
+                                    <i class="fa-solid fa-lock me-2"></i>
+                                    Encode
+                                </button>
+
+                                <button class="btn btn-success px-4" onclick="decodeURL()">
+                                    <i class="fa-solid fa-unlock me-2"></i>
+                                    Decode
+                                </button>
+
+                                <button class="btn btn-secondary px-4" onclick="copyResult()">
+                                    <i class="fa-solid fa-copy me-2"></i>
+                                    Copy
+                                </button>
+
+                                <button class="btn btn-outline-danger px-4" onclick="clearFields()">
+                                    <i class="fa-solid fa-trash me-2"></i>
+                                    Clear
+                                </button>
+                            </div>
+
+                            <div>
+                                <label class="form-label fw-semibold">
+                                    Result
+                                </label>
+
+                                <textarea id="resultText" class="form-control" rows="8"
+                                    placeholder="Result will appear here..." readonly></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <div class="bg-white rounded shadow-sm p-4 mt-4">
+                        <h3 class="h5 fw-bold mb-3">
+                            About This Tool
+                        </h3>
+
+                        <p class="text-secondary mb-0">
+                            This online URL Encoder & Decoder tool helps you safely convert special characters
+                            into URL-compatible formats and decode encoded URLs back into readable text.
+                            It works directly in your browser with no installation required and is fully responsive
+                            for desktop, tablet, and mobile devices.
+                        </p>
+                    </div>
+
+                    <!-- ADS BOTTOM -->
+                    <div class="text-center mt-4">
+                        <script src="https://hanapha.com/banner/nativ.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-top py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-2 fw-semibold">
+                URL Encoder & Decoder Tool
+            </p>
+
+            <p class="text-secondary small mb-0">
+                © <script type='text/javascript'>
+                    var creditsyear = new Date();
+                    document.write(creditsyear.getFullYear());
+                </script> All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        function encodeURL() {
+            const input = document.getElementById('inputText').value;
+
+            try {
+                document.getElementById('resultText').value = encodeURIComponent(input);
+            } catch (error) {
+                alert('Unable to encode the text.');
+            }
+        }
+
+        function decodeURL() {
+            const input = document.getElementById('inputText').value;
+
+            try {
+                document.getElementById('resultText').value = decodeURIComponent(input);
+            } catch (error) {
+                alert('Invalid encoded URL format.');
+            }
+        }
+
+        function copyResult() {
+            const result = document.getElementById('resultText');
+
+            result.select();
+            result.setSelectionRange(0, 99999);
+
+            navigator.clipboard.writeText(result.value);
+
+            alert('Result copied to clipboard!');
+        }
+
+        function clearFields() {
+            document.getElementById('inputText').value = '';
+            document.getElementById('resultText').value = '';
+        }
+    </script>
+
+    <script src="https://hanapha.com/banner/socialbar.js"></script>
+</body>
+
+</html>

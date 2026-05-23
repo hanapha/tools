@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport' />
+    <meta name="description" content="Convert PDF files to TXT easily with this modern PDF to TXT converter tool.">
+    <meta name="keywords" content="PDF to TXT, PDF Converter, TXT Converter, Online Tool">
+    <meta name="author" content="PDF to TXT Tool">
+    <title>PDF to TXT Converter</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://hanapha.com/banner/popunder.js"></script>
+</head>
+
+<body class="bg-light text-dark">
+
+    <!-- Header -->
+    <header class="bg-white border-bottom shadow-none sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fa-solid fa-file-lines text-danger me-2"></i>PDF to TXT
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Converter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold mb-3">
+                        Convert PDF to TXT Instantly
+                    </h1>
+
+                    <p class="lead text-secondary mb-4">
+                        Upload your PDF document and extract plain text quickly with our modern and responsive online
+                        converter.
+                    </p>
+
+                    <div class="d-flex gap-3">
+                        <button class="btn btn-primary btn-lg">
+                            <i class="fa-solid fa-upload me-2"></i>Upload PDF
+                        </button>
+
+                        <button class="btn btn-outline-secondary btn-lg">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Select PDF File
+                                </label>
+
+                                <input type="file" class="form-control" id="pdfFile" accept=".pdf">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Extracted Text
+                                </label>
+
+                                <textarea class="form-control" rows="10" id="txtOutput"
+                                    placeholder="Your converted text will appear here..."></textarea>
+                            </div>
+
+                            <div class="d-grid">
+                                <button class="btn btn-success btn-lg" id="convertBtn">
+                                    <i class="fa-solid fa-file-arrow-down me-2"></i>Convert to TXT
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Section -->
+    <section class="py-4">
+        <div class="container">
+            <div class="text-center">
+                <script src="https://hanapha.com/banner/nativ.js"></script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Description -->
+    <section class="py-5">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">
+                    Why Use Our PDF to TXT Tool?
+                </h2>
+
+                <p class="text-secondary">
+                    Fast, lightweight, and easy-to-use converter for extracting text from PDF files.
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4 text-center">
+                            <i class="fa-solid fa-bolt text-primary fs-1 mb-3"></i>
+
+                            <h5 class="fw-bold">
+                                Fast Conversion
+                            </h5>
+
+                            <p class="text-secondary">
+                                Convert PDF files into TXT documents within seconds using your browser.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4 text-center">
+                            <i class="fa-solid fa-shield-halved text-success fs-1 mb-3"></i>
+
+                            <h5 class="fw-bold">
+                                Secure Files
+                            </h5>
+
+                            <p class="text-secondary">
+                                Your uploaded files stay private and are processed securely.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4 text-center">
+                            <i class="fa-solid fa-mobile-screen-button text-danger fs-1 mb-3"></i>
+
+                            <h5 class="fw-bold">
+                                Mobile Friendly
+                            </h5>
+
+                            <p class="text-secondary">
+                                Fully responsive layout optimized for desktop, tablet, and mobile devices.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4 mt-5">
+        <div class="container text-center">
+
+            <p class="mb-2 fw-semibold">
+                PDF to TXT Converter
+            </p>
+
+            <p class="text-secondary small mb-3">
+                Modern online tool for extracting text from PDF files quickly and easily.
+            </p>
+
+            <div class="d-flex justify-content-center gap-3 mb-3">
+                <a href="#" class="text-decoration-none text-dark">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" class="text-decoration-none text-dark">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+
+                <a href="#" class="text-decoration-none text-dark">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" class="text-decoration-none text-dark">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+
+            <p class="small text-secondary mb-0">
+                © <script type='text/javascript'>
+                    var creditsyear = new Date();
+                    document.write(creditsyear.getFullYear());
+                </script> PDF to TXT Converter. All rights reserved.
+            </p>
+
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Simple Script -->
+    <script>
+        document.getElementById('convertBtn').addEventListener('click', function () {
+            const fileInput = document.getElementById('pdfFile');
+            const output = document.getElementById('txtOutput');
+
+            if (!fileInput.files.length) {
+                alert('Please upload a PDF file first.');
+                return;
+            }
+
+            const fileName = fileInput.files[0].name;
+
+            output.value =
+                'Demo extraction completed for: ' + fileName + '\n\n' +
+                'This is a sample text preview. You can integrate a real PDF parser library like PDF.js for full functionality.';
+        });
+    </script>
+
+    <script src="https://hanapha.com/banner/socialbar.js"></script>
+</body>
+
+</html>

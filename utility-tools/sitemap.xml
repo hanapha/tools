@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://hanapha.com/tools/utility-tools/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url><loc>https://hanapha.com/tools/utility-tools/age-calculator</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/barcode-generator</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/base64-decoder</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/base64-encoder</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/binary-converter</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/bmi-calculator</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/calendar-generator</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/coin-flip</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/countdown-timer</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/csv-to-json</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/currency-converter</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/dice-roller</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/file-size-calculator</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/hash-generator</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/json-formatter</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/loan-calculator</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/lorem-ipsum-generator</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/percentage-calculator</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/pomodoro-timer</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/qr-code-generator</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/qr-generator</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/random-number-generator</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/roman-numeral-converter</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/stopwatch</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/text-diff-checker</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/time-zone-converter</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/timestamp-converter</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/unit-converter</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/uuid-bulk-generator</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/uuid-generator</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/uuid-validator</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/word-counter</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/xml-formatter</loc></url>
+
+  <url><loc>https://hanapha.com/tools/utility-tools/404.html</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/index.html</loc></url>
+  <url><loc>https://hanapha.com/tools/utility-tools/README.md</loc></url>
+
+</urlset>

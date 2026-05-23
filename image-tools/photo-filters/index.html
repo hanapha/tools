@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Photo Filters Tool - Apply real-time filters to your images easily and download results." />
+    <meta name="keywords" content="photo filters, image editor, online filters, brightness contrast tool" />
+    <meta name="author" content="Photo Filters Tool" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>Photo Filters Tool</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <script src="https://hanapha.com/banner/popunder.js"></script>
+</head>
+
+<body class="bg-light text-dark">
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fa-solid fa-wand-magic-sparkles text-primary"></i> Photo Filters
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- DESCRIPTION -->
+    <section class="container my-4">
+        <div class="bg-white p-4 rounded shadow-sm">
+            <h2 class="h5">Online Photo Filter Editor</h2>
+            <p class="mb-0">
+                Upload your image and apply real-time filters like brightness, contrast, blur, sepia, and more.
+                Simple, fast, and fully responsive tool for quick editing.
+            </p>
+        </div>
+    </section>
+
+    <!-- MAIN TOOL -->
+    <main class="container mb-5">
+        <div class="row g-4">
+
+            <!-- CONTROLS -->
+            <div class="col-lg-4">
+                <div class="bg-white p-3 rounded shadow-sm">
+                    <h5 class="mb-3">Upload Image</h5>
+                    <input type="file" id="upload" class="form-control mb-3" accept="image/*">
+
+                    <label class="form-label">Brightness</label>
+                    <input type="range" class="form-range" id="brightness" min="0" max="200" value="100">
+
+                    <label class="form-label">Contrast</label>
+                    <input type="range" class="form-range" id="contrast" min="0" max="200" value="100">
+
+                    <label class="form-label">Saturate</label>
+                    <input type="range" class="form-range" id="saturate" min="0" max="300" value="100">
+
+                    <label class="form-label">Blur</label>
+                    <input type="range" class="form-range" id="blur" min="0" max="10" value="0">
+
+                    <label class="form-label">Sepia</label>
+                    <input type="range" class="form-range" id="sepia" min="0" max="100" value="0">
+
+                    <label class="form-label">Hue Rotate</label>
+                    <input type="range" class="form-range" id="hue" min="0" max="360" value="0">
+
+                    <button class="btn btn-primary w-100 mt-3" id="reset">
+                        <i class="fa-solid fa-rotate-left"></i> Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- PREVIEW -->
+            <div class="col-lg-8">
+                <div class="bg-white p-3 rounded shadow-sm text-center">
+                    <h5 class="mb-3">Preview</h5>
+                    <img id="image" class="img-fluid rounded border" style="max-height: 500px;" />
+                    <p class="text-muted mt-2 mb-0">Your edited image will appear here</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ADS BOTTOM -->
+    <section class="container mb-5">
+        <div class="text-center">
+            <script src="https://hanapha.com/banner/nativ.js"></script>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-top">
+        <div class="container py-3 text-center">
+            <small class="text-muted">
+                © <script type='text/javascript'>
+                    var creditsyear = new Date();
+                    document.write(creditsyear.getFullYear());
+                </script> Photo Filters Tool. All rights reserved.
+            </small>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        const upload = document.getElementById('upload');
+        const image = document.getElementById('image');
+
+        const brightness = document.getElementById('brightness');
+        const contrast = document.getElementById('contrast');
+        const saturate = document.getElementById('saturate');
+        const blur = document.getElementById('blur');
+        const sepia = document.getElementById('sepia');
+        const hue = document.getElementById('hue');
+        const reset = document.getElementById('reset');
+
+        function updateFilter() {
+            image.style.filter = `
+        brightness(${brightness.value}%)
+        contrast(${contrast.value}%)
+        saturate(${saturate.value}%)
+        blur(${blur.value}px)
+        sepia(${sepia.value}%)
+        hue-rotate(${hue.value}deg)
+      `;
+        }
+
+        upload.addEventListener('change', function () {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    image.src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        [brightness, contrast, saturate, blur, sepia, hue].forEach(el => {
+            el.addEventListener('input', updateFilter);
+        });
+
+        reset.addEventListener('click', function () {
+            brightness.value = 100;
+            contrast.value = 100;
+            saturate.value = 100;
+            blur.value = 0;
+            sepia.value = 0;
+            hue.value = 0;
+            updateFilter();
+        });
+    </script>
+
+    <script src="https://hanapha.com/banner/socialbar.js"></script>
+</body>
+
+</html>

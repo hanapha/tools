@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport' />
+    <meta name="description"
+        content="Free PDF Metadata Editor Tool - Edit PDF title, author, subject, keywords and creator online.">
+    <meta name="keywords" content="PDF Metadata Editor, Edit PDF Metadata, PDF Tool, PDF Author Editor">
+    <meta name="author" content="PDF Metadata Editor">
+    <meta name="robots" content="index, follow">
+
+    <title>PDF Metadata Editor</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
+    <script src="https://hanapha.com/banner/popunder.js"></script>
+</head>
+
+<body class="bg-light text-dark">
+
+    <!-- Header -->
+    <header class="border-bottom bg-white sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-danger" href="#">
+                    <i class="fa-solid fa-file-pdf me-2"></i>
+                    PDF Metadata Editor
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tools</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="py-5 bg-danger bg-gradient text-white">
+        <div class="container text-center">
+            <h1 class="fw-bold mb-3">Edit PDF Metadata Online</h1>
+            <p class="lead mb-0">
+                Change PDF title, author, subject, creator, and keywords instantly using your browser.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="py-5">
+        <div class="container">
+
+            <!-- Description -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <h2 class="h4 fw-bold mb-3">
+                                <i class="fa-solid fa-circle-info text-danger me-2"></i>
+                                About This Tool
+                            </h2>
+
+                            <p class="text-secondary mb-0">
+                                This free PDF Metadata Editor allows you to update document information such as title,
+                                author, subject, producer, creator, and keywords directly in your browser.
+                                Your files are processed locally for better privacy and security.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Space -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-8">
+                    <div class="text-center">
+                        <script src="https://hanapha.com/banner/nativ.js"></script>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Editor -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow rounded-4">
+                        <div class="card-body p-4">
+
+                            <h2 class="h4 fw-bold mb-4">
+                                <i class="fa-solid fa-pen-to-square text-danger me-2"></i>
+                                PDF Metadata Editor
+                            </h2>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Upload PDF File</label>
+                                <input type="file" class="form-control" id="pdfFile" accept=".pdf">
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Title</label>
+                                    <input type="text" class="form-control" id="title">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Author</label>
+                                    <input type="text" class="form-control" id="author">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Subject</label>
+                                    <input type="text" class="form-control" id="subject">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Keywords</label>
+                                    <input type="text" class="form-control" id="keywords">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Creator</label>
+                                    <input type="text" class="form-control" id="creator">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Producer</label>
+                                    <input type="text" class="form-control" id="producer">
+                                </div>
+                            </div>
+
+                            <div class="d-grid mt-3">
+                                <button class="btn btn-danger btn-lg rounded-3" id="saveBtn">
+                                    <i class="fa-solid fa-download me-2"></i>
+                                    Save Updated PDF
+                                </button>
+                            </div>
+
+                            <div class="alert alert-info mt-4 mb-0">
+                                <i class="fa-solid fa-shield-halved me-2"></i>
+                                Your PDF file never leaves your device.
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1 fw-semibold">
+                PDF Metadata Editor
+            </p>
+            <p class="text-muted small mb-0">
+                © <script type='text/javascript'>
+                    var creditsyear = new Date();
+                    document.write(creditsyear.getFullYear());
+                </script> All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.getElementById('saveBtn').addEventListener('click', async () => {
+
+            const fileInput = document.getElementById('pdfFile');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert('Please upload a PDF file first.');
+                return;
+            }
+
+            const arrayBuffer = await file.arrayBuffer();
+
+            const pdfDoc = await PDFLib.PDFDocument.load(arrayBuffer);
+
+            const title = document.getElementById('title').value;
+            const author = document.getElementById('author').value;
+            const subject = document.getElementById('subject').value;
+            const keywords = document.getElementById('keywords').value;
+            const creator = document.getElementById('creator').value;
+            const producer = document.getElementById('producer').value;
+
+            if (title) pdfDoc.setTitle(title);
+            if (author) pdfDoc.setAuthor(author);
+            if (subject) pdfDoc.setSubject(subject);
+            if (keywords) pdfDoc.setKeywords([keywords]);
+            if (creator) pdfDoc.setCreator(creator);
+            if (producer) pdfDoc.setProducer(producer);
+
+            pdfDoc.setModificationDate(new Date());
+
+            const pdfBytes = await pdfDoc.save();
+
+            const blob = new Blob([pdfBytes], {
+                type: 'application/pdf'
+            });
+
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'updated-metadata.pdf';
+
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+        });
+    </script>
+
+    <script src="https://hanapha.com/banner/socialbar.js"></script>
+</body>
+
+</html>

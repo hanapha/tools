@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
+    <meta name="description" content="Free HTML Entity Encoder tool to convert special characters into HTML entities instantly. Modern responsive Bootstrap design with fast encoding results.">
+    <meta name="keywords" content="HTML Entity Encoder, HTML Encoder, Encode HTML, Special Character Converter, HTML Tools">
+    <meta name="author" content="Hanapha Tools">
+    <meta name="robots" content="index, follow">
+
+    <title>HTML Entity Encoder - Free Online Tool</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://hanapha.com/banner/popunder.js"></script>
+</head>
+<body class="bg-light text-dark">
+
+    <!-- Header -->
+    <header class="bg-white border-bottom sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand fw-bold text-dark" href="#">
+                    <i class="fa-solid fa-code me-2 text-primary"></i>
+                    HTML Entity Encoder
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Tools</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+
+                    <div class="bg-white rounded-4 shadow-sm p-4 p-lg-5">
+
+                        <div class="mb-4">
+                            <div class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10 mb-3"
+                                style="width:80px;height:80px;">
+                                <i class="fa-solid fa-lock fa-2x text-primary"></i>
+                            </div>
+
+                            <h1 class="fw-bold mb-3">
+                                HTML Entity Encoder
+                            </h1>
+
+                            <p class="text-secondary mb-0">
+                                Convert special characters into HTML entities instantly.
+                                This free online encoder helps protect and display special symbols safely in HTML code.
+                            </p>
+                        </div>
+
+                        <!-- Ad Space -->
+                        <div class="text-center mb-4">
+                            <script src="https://hanapha.com/banner/nativ.js"></script>
+                        </div>
+
+                        <!-- Input -->
+                        <div class="mb-4 text-start">
+                            <label class="form-label fw-semibold">
+                                Enter Text
+                            </label>
+
+                            <textarea 
+                                id="inputText"
+                                class="form-control form-control-lg"
+                                rows="7"
+                                placeholder="Type or paste your text here..."
+                            ></textarea>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="d-flex flex-wrap gap-3 justify-content-center mb-4">
+                            <button class="btn btn-primary btn-lg px-4" onclick="encodeHTML()">
+                                <i class="fa-solid fa-wand-magic-sparkles me-2"></i>
+                                Encode
+                            </button>
+
+                            <button class="btn btn-outline-secondary btn-lg px-4" onclick="copyOutput()">
+                                <i class="fa-regular fa-copy me-2"></i>
+                                Copy
+                            </button>
+
+                            <button class="btn btn-outline-danger btn-lg px-4" onclick="clearFields()">
+                                <i class="fa-solid fa-trash me-2"></i>
+                                Clear
+                            </button>
+                        </div>
+
+                        <!-- Output -->
+                        <div class="text-start">
+                            <label class="form-label fw-semibold">
+                                Encoded Output
+                            </label>
+
+                            <textarea 
+                                id="outputText"
+                                class="form-control form-control-lg bg-light"
+                                rows="7"
+                                readonly
+                                placeholder="Encoded HTML entities will appear here..."
+                            ></textarea>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Description -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <div class="bg-white rounded-4 shadow-sm p-4">
+
+                        <h2 class="fw-bold mb-3">
+                            About This Tool
+                        </h2>
+
+                        <p class="text-secondary mb-3">
+                            The HTML Entity Encoder converts special characters such as
+                            &, <, >, quotes, and symbols into safe HTML entities.
+                            This is useful for developers, bloggers, and website owners
+                            who need secure and correct HTML rendering.
+                        </p>
+
+                        <p class="text-secondary mb-0">
+                            The tool works instantly in your browser without uploading
+                            any data, making it fast, secure, and privacy-friendly.
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <div class="fw-semibold">
+                        HTML Entity Encoder
+                    </div>
+
+                    <small class="text-secondary">
+                        Free modern online developer tool.
+                    </small>
+                </div>
+
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-decoration-none text-secondary me-3">
+                        Privacy
+                    </a>
+
+                    <a href="#" class="text-decoration-none text-secondary me-3">
+                        Terms
+                    </a>
+
+                    <a href="#" class="text-decoration-none text-secondary">
+                        Contact
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script -->
+    <script>
+        function encodeHTML() {
+            const input = document.getElementById("inputText").value;
+
+            const encoded = input
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+
+            document.getElementById("outputText").value = encoded;
+        }
+
+        function copyOutput() {
+            const output = document.getElementById("outputText");
+
+            if(output.value.trim() === "") {
+                alert("Nothing to copy.");
+                return;
+            }
+
+            output.select();
+            output.setSelectionRange(0, 99999);
+
+            navigator.clipboard.writeText(output.value);
+
+            alert("Encoded text copied successfully.");
+        }
+
+        function clearFields() {
+            document.getElementById("inputText").value = "";
+            document.getElementById("outputText").value = "";
+        }
+    </script>
+
+    <script src="https://hanapha.com/banner/socialbar.js"></script>
+</body>
+</html>
